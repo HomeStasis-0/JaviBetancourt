@@ -7,17 +7,57 @@ body {
     font-family: "Playfair Display";
 }
 
+button {
+    z-index: 100;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+    border:color(from color srgb r g b);
+    border-radius: 5px;
+    color: whitesmoke;
+}
 
 .my-intro {
     /* border-style: solid; */
+    position: relative;
     text-align: center;
-    align-items: center;
-    font-size: 60px;
-    margin-bottom: 0;
+    margin: auto;
+    font-size: 50px;
+    z-index: 1000;
 }
+
+@media (max-width: 1200px) {
+    .my-intro {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .my-intro {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .my-intro {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-intro {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .my-intro {
+        font-size: 15px;
+    }
+}
+
 .intro {
     flex: 1;
-    margin-top: 50px
+    margin-top: 100px
 }
 
 @media (min-width: 890px) {
@@ -53,15 +93,43 @@ body {
     max-height: 200px;
     transform:rotate(45deg);
     padding: 0;
+    transition: box-shadow 0.5s;
     /* border: solid red; */
+}
+
+.projects:hover,
+.about-me:hover,
+.contact:hover {
+    box-shadow: 0 0 15px #3cf8ff;
 }
 
 @media (max-width: 889px) {
     .projects,
     .about-me,
     .contact {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects,
+    .about-me,
+    .contact {
+        width: 125px;
+        height: 125px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .projects,
+    .about-me,
+    .contact {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
     }
 }
 
@@ -73,8 +141,8 @@ body {
         width: 30vw;
         height: 30vw;
         font-size: 3vw;
-        max-width: 300px;
-        max-height: 300px;
+        max-width: 225px;
+        max-height: 225px;
     }
 }
 
@@ -82,7 +150,7 @@ body {
     .projects,
     .about-me,
     .contact {
-        font-size: 55px;
+        font-size: 45px;
     }
 }
 
@@ -96,6 +164,11 @@ body {
     width: 100%;
     transform: rotate(-45deg);
     text-align: center;
+    transition: text-shadow 0.5s;
 }
 
-
+.projects span:hover,
+.about-me span:hover,
+.contact span:hover {
+    text-shadow: 0px 0px 6px #3cf8ff;
+}
