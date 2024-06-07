@@ -1,41 +1,64 @@
+
 .trapdoor {
-  -webkit-transform: translateZ(0px);
-  -webkit-font-smoothing: antialiased;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -100px;
-  margin-top: -25px;
-  width: 200px;
-  height: 50px;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+  width: 20vw;
+  height: 10vh;
   box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
-  background: rgba(0, 0, 0, 0.3);
   transition: background 400ms ease-in-out;
-  overflow: hidden;
+  border: none;
 }
 
-.trapdoor:hover {
-  background: #fff;
+.trapdoor:hover, .trapdoor.active {
+  background: transparent;
 }
 
-.trapdoor:hover .door {
-  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+.trapdoor:hover .door, .trapdoor.active .door {
+  background: transparent;
   transform: scale(1.08);
 }
 
-.trapdoor:hover .left {
+.trapdoor:hover .left, .trapdoor.active .left {
   left: -50%;
 }
 
-.trapdoor:hover .right {
+.trapdoor:hover .right, .trapdoor.active .right {
   left: 100%;
 }
 
-.trapdoor .twitter-follow-button {
+.trapdoor:hover .github-button, .trapdoor.active .github-button {
+  opacity: 1;
+}
+
+/* .github-button {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.trapdoor .github-button {
   position: absolute !important;
   top: 50%;
   left: 50%;
+  font-size: clamp(2vw, 3vw, 20px);
+  color: white;
+  background: none;
   transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.trapdoor .github-button:hover, .trapdoor .github-button.active {
+  box-shadow: 0 0 15px #3cf8ff;
+  /* opacity: 1; */
+}
+
+.trapdoor .github-button span:hover, .trapdoor .github-button span.active {
+  text-shadow: 0px 0px 6px #3cf8ff;
+  /* opacity: 1; */
 }
 
 .left {
@@ -57,34 +80,198 @@
   width: 50%;
   z-index: 2;
   height: 100%;
+  background: transparent;
 }
 
 .door:before {
-  font-family: "tweet", sans-serif;
+  content: "";
   position: absolute;
-  font-size: 35px;
   display: flex;
-  color: #4099FF;
-  content: "\e000";
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
+  background: url("../logo/github-mark-white.png") no-repeat center, transparent;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 5vh;
 }
 
 .left:before {
-  left: 130px;
+  left: 15vw;
   transform: translateX(-100%) translateY(-50%);
 }
 
 .right:before {
-  right: 120px;
+  right: 15vw;
   transform: translateX(100%) translateY(-50%);
 }
 
-@font-face {
-  font-family: "tweet";
-  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/tweet.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+
+
+
+
+.trapdoor2 {
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+  width: 20vw;
+  height: 10vh;
+  box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
+  transition: background 400ms ease-in-out;
+}
+
+
+.trapdoor2:hover, .trapdoor2.active {
+  background: transparent;
+}
+
+.trapdoor2:hover .door2, .trapdoor2.active .door2 {
+  background: transparent;
+  transform: scale(1.08);
+}
+
+.trapdoor2:hover .left, .trapdoor2.active .left {
+  left: -50%;
+}
+
+.trapdoor2:hover .right, .trapdoor2.active .right {
+  left: 100%;
+}
+
+.trapdoor2 .instagram-button {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  font-size: clamp(2vw, 3vw, 20px);
+  color: white;
+  background: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.trapdoor2 .instagram-button:hover, .trapdoor2 .instagram-button.active {
+  box-shadow: 0 0 15px #3cf8ff;
+  /* opacity: 1; */
+}
+
+.trapdoor2 .instagram-button span:hover, .trapdoor2 .instagram-button span.active {
+  text-shadow: 0px 0px 6px #3cf8ff;
+  /* opacity: 1; */
+}
+
+.trapdoor2:hover .instagram-button, .trapdoor2.active .instagram-button {
+  opacity: 1;
+}
+
+.door2 {
+  transition: 400ms, box-shadow 200ms, transform 300ms;
+  transition-timing-function: ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  z-index: 2;
+  height: 100%;
+  background: transparent;
+}
+
+.door2:before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background: url("../logo/Instagram_icon.png") no-repeat center, transparent;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 5vh;
+}
+
+
+.trapdoor3 {
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+  width: 20vw;
+  height: 10vh;
+  box-shadow: inset -7px 0px 12px -8px rgba(0, 0, 0, 0.3), inset 7px 0px 12px -8px rgba(0, 0, 0, 0.3);
+  transition: background 400ms ease-in-out;
+  overflow: hidden;
+}
+
+.trapdoor3:hover, .trapdoor3.active {
+  background: transparent;
+}
+
+.trapdoor3:hover .door3, .trapdoor3.active .door3 {
+  background: transparent;
+  transform: scale(1.08);
+}
+
+.trapdoor3:hover .left, .trapdoor3.active .left {
+  left: -50%;
+}
+
+.trapdoor3:hover .right, .trapdoor3.active .right {
+  left: 100%;
+}
+
+.trapdoor3 .linkedin-button {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  font-size: clamp(2vw, 3vw, 20px);
+  color: white;
+  background: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.trapdoor3 .linkedin-button:hover, .trapdoor3 .linkedin-button.active {
+  box-shadow: 0 0 15px #3cf8ff;
+  /* opacity: 1; */
+}
+
+.trapdoor3 .linkedin-button span:hover, .trapdoor3 .linkedin-button span.active {
+  text-shadow: 0px 0px 6px #3cf8ff;
+  /* opacity: 1; */
+}
+
+.trapdoor3:hover .linkedin-button, .trapdoor3.active .linkedin-button {
+  opacity: 1;
+}
+
+.door3 {
+  transition: 400ms, box-shadow 200ms, transform 300ms;
+  transition-timing-function: ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  z-index: 2;
+  height: 100%;
+  background: transparent;
+}
+
+.door3:before {
+  content: "";
+  position: absolute;
+  display: flex;
+  background: url("../logo/Linkedin.png") no-repeat center, transparent;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 5vh;
+}
+
+
+
+.trapdoor-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 10%;
+  /* border: 2px solid #fff; */
 }

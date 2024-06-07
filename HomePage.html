@@ -7,8 +7,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="home/home.css">
         <link rel="stylesheet" href="home/background.css">
+        <link rel="stylesheet" href="contact/contact.css">
     </head>
     <body>
+        <div>
         <div class="intro">
             <p class="my-intro">
                 Hello! Welcome to my website!
@@ -16,12 +18,39 @@
         </div>
 
         <div class="buttons">
-            <button class="projects"> <span class="projects-word">Projects</span></button>
-            <a href="AboutMe.html" style="text-decoration: none;">
-                <button class="about-me"><span class="about-me-word">About Me</span></button>
-            </a>
-            <button class="contact"><span class="contact-word">Contact</span></button>
-        </div> 
+            <button class="projects"> <span>Projects</span></button>
+            <button class="about-me" onclick="window.open('AboutMe.html')"><span>About Me</span></button>
+            <button class="resume"><span>Resume</span></button>
+        </div>
+
+        <div class="trapdoor-container">
+            <div class="trapdoor">
+                <div class="left door">
+                </div>
+                <div class="right door">
+                </div>
+                <button onclick="window.open('https://github.com/HomeoStasis69', '_blank')" class="github-button" data-show-count="false" data-size="large" data-dnt="false"><span>My GitHub</span></button>
+            </div>
+
+            <div class="trapdoor2">
+                <div class="left door2">
+                </div>
+                <div class="right door2">
+                </div>
+                <button onclick="window.open('https://www.instagram.com/homeo._.stasis/', '_blank')" class="instagram-button" data-show-count="false" data-size="large" data-dnt="false"><span>My Instagram</span></button>
+            </div>
+
+            <div class="trapdoor3">
+                <div class="left door3">
+                </div>
+                <div class="right door3">
+                </div>
+                <button onclick="window.open('https://www.linkedin.com/in/javier-betancourt-1100b2268/', '_blank')" class="linkedin-button" data-show-count="false" data-size="large" data-dnt="false"><span>My Linkedin</span></button>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="contact/contact.js"></script>
+        </div>
 
         <div class="stars">
             <div class="star"></div>
@@ -124,6 +153,6 @@
             <div class="star"></div>
             <div class="star"></div>
             <div class="star"></div>
-          </div>
+        </div>
     </body>
 </html>

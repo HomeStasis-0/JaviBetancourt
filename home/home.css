@@ -4,171 +4,55 @@ p {
 }
 
 body {
-    font-family: "Playfair Display";
-}
-
-button {
-    z-index: 100;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
-    border:color(from color srgb r g b);
-    border-radius: 5px;
+    background: radial-gradient(#0d1d31 0%, #000000 100%);
     color: whitesmoke;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
 }
 
-.my-intro {
-    /* border-style: solid; */
-    position: relative;
-    text-align: center;
-    margin: auto;
-    font-size: 50px;
-    z-index: 1000;
-}
-
-@media (max-width: 1200px) {
-    .my-intro {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .my-intro {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 800px) {
-    .my-intro {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 600px) {
-    .my-intro {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 400px) {
-    .my-intro {
-        font-size: 15px;
-    }
+:root {
+    --primary-color: rgb(36, 195, 231);
 }
 
 .intro {
-    flex: 1;
-    margin-top: 100px
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    /* border: 2px solid var(--primary-color); */
 }
 
-@media (min-width: 890px) {
-    .buttons {
-        margin-top: 300px;
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
-@media (max-width: 889px) {
-    .buttons {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        gap: 100px;
-    }
-}
-
-.projects,
-.about-me,
-.contact {
-    position: relative;
+.buttons {
     display: flex;
-    flex: 1fr;
-    align-items: center;
-    margin-left: 30px;
-    width:20vw;
-    height: 20vw;
-    font-size: 35px;
-    max-width: 200px;
-    max-height: 200px;
-    transform:rotate(45deg);
-    padding: 0;
-    transition: box-shadow 0.5s;
-    /* border: solid red; */
+    flex-direction: column;
+    margin: 200px;
+    gap: 3rem;
 }
 
-.projects:hover,
-.about-me:hover,
-.contact:hover {
+button {
+    z-index: 200;
+    position: relative;
+    padding: 3rem 3rem;
+    font-size: 2rem;
+    color: whitesmoke;
+    background: none;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+
+button:hover {
     box-shadow: 0 0 15px #3cf8ff;
 }
 
-@media (max-width: 889px) {
-    .projects,
-    .about-me,
-    .contact {
-        width: 150px;
-        height: 150px;
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 600px) {
-    .projects,
-    .about-me,
-    .contact {
-        width: 125px;
-        height: 125px;
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 400px) {
-    .projects,
-    .about-me,
-    .contact {
-        width: 100px;
-        height: 100px;
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 1300px) {
-    .projects,
-    .about-me,
-    .contact {
-        margin-top: 3vw;
-        width: 30vw;
-        height: 30vw;
-        font-size: 3vw;
-        max-width: 225px;
-        max-height: 225px;
-    }
-}
-
-@media (min-width: 1300px) {
-    .projects,
-    .about-me,
-    .contact {
-        font-size: 45px;
-    }
-}
-
-.projects span,
-.about-me span,
-.contact span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    transform: rotate(-45deg);
-    text-align: center;
+button span {
     transition: text-shadow 0.5s;
 }
 
-.projects span:hover,
-.about-me span:hover,
-.contact span:hover {
+button:hover span {
     text-shadow: 0px 0px 6px #3cf8ff;
 }
