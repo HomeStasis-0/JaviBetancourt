@@ -33,7 +33,7 @@ body {
     gap: 3rem;
 }
 
-button {
+.projects, .about-me, .resume {
     z-index: 200;
     position: relative;
     padding: 3rem 3rem;

@@ -5,6 +5,7 @@
     align-items: center;
     height: 100vh;
     /* border: solid 1px red; */
+    
 }
 
 body {
@@ -36,7 +37,7 @@ body {
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 5%;
+    top: 0%;
     font-size: 45px;
     z-index: 1000;
     opacity: 100%;
@@ -47,12 +48,15 @@ body {
     position: static;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 100px; /* Adjust as needed */
+    padding-bottom: 100px; /* Add this line */
     height: auto;
     width: 800px;
     font-size: 30px;
     opacity: 100%;
 }
+
+
 @media (max-width: 1200px) {
     .aboutMe, .About{
         font-size: 35px;

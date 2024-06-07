@@ -29,6 +29,7 @@
 
 .trapdoor:hover .github-button, .trapdoor.active .github-button {
   opacity: 1;
+  border-radius: 5px;
 }
 
 /* .github-button {
@@ -160,6 +161,7 @@
 
 .trapdoor2:hover .instagram-button, .trapdoor2.active .instagram-button {
   opacity: 1;
+  border-radius: 5px;
 }
 
 .door2 {
@@ -238,6 +240,7 @@
 
 .trapdoor3:hover .linkedin-button, .trapdoor3.active .linkedin-button {
   opacity: 1;
+  border-radius: 5px;
 }
 
 .door3 {
