@@ -44,7 +44,6 @@ body {
 }
 
 .aboutMe {
-    overflow: hidden;
     position: static;
     justify-content: center;
     align-items: center;
