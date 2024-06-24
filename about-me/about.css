@@ -47,8 +47,8 @@ body {
     position: static;
     justify-content: center;
     align-items: center;
-    padding-top: 100px; /* Adjust as needed */
-    padding-bottom: 100px; /* Add this line */
+    padding-top: 100px;
+    padding-bottom: 100px;
     height: auto;
     width: 800px;
     font-size: 30px;
